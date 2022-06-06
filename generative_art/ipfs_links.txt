@@ -1,0 +1,2 @@
+images : https://gateway.pinata.cloud/ipfs/QmfPpQt2twQciNiDh5SgEKwx6jNXrLUvUtEJEtJuqJDSCf/{id}.jpeg
+metadata : https://gateway.pinata.cloud/ipfs/QmXWHHVCthm6WjvsntjxFjPnuVhaC4X4vjMnN6M2FQzmah/{id}.json
