@@ -11,7 +11,7 @@ import json
 
 # Data to be written
 def retrieve_data2_json(l_data):
-    for i in range(20):
+    for i in range(50):
         dictionary ={
         "description": "Generative piece of art", 
         "external_url": "", 
