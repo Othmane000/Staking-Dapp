@@ -50,7 +50,7 @@ def generate_art():
             draw.line(line_xy, fill=color_line, width=thickness) 
 
         image = image.resize((target_size,target_size), resample=Image.ANTIALIAS)
-        image.save(f"images\\{numberimage + 1}.jpeg")
+        image.save(f"image_tests\\{numberimage + 1}.jpeg")
 
 
     for i in range(len(l_line_color)): # for getting a tuple (min, max)
