@@ -18,7 +18,8 @@ function App() {
     <div className ="overlay">
       <div className="App">
         <NavBar accounts={accounts} setAccounts={setAccounts}/>
-        <Minting accounts={accounts} setAccounts={setAccounts} /> 
+        <Minting accounts={accounts} setAccounts={setAccounts} />
+        <Staking accounts={accounts} setAccounts={setAccounts} /> 
       </div>
       <div className="moving-background"></div>
     </div>

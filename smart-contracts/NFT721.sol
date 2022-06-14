@@ -8,13 +8,15 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol" ;
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
+
+// contract address 0x9541a34fDa8294ad456bA118d06FaB2Dfec9ee83
 contract NFT721 is ERC721, Ownable {
 
     uint256 public totalsupply = 0 ;
     uint256 public maxSupply ;
-    uint256 public price = 0.01 ether ; // 0.01 ether -> 30000000000000000 wei 
+    uint256 public price = 0.01 ether ; // 30000000000000000
     
-    mapping(uint256 => bool) public NFTstock ; // this will check if a token is available or not
+    mapping(uint256 => bool) public NFTWasMinted ; // this checks if a token was minted or not
     mapping(address => bool) public approval ;
 
     event NFTminted(
@@ -24,7 +26,7 @@ contract NFT721 is ERC721, Ownable {
         uint256 numberOfTokens
     );
 
-    constructor() ERC721("Othmane 2 PyART collection","PART") Ownable(){
+    constructor() ERC721("Othmane Hachad's PyART collection","HART") Ownable(){
         approval[msg.sender] = true ;
         maxSupply = 50 ;
     }
@@ -55,17 +57,17 @@ contract NFT721 is ERC721, Ownable {
 
     
 
-    function mint(uint256 amount) public payable{
+    function mint(uint amount) public payable{
         require(msg.value >= amount * price, "inputted wong value");
-        require(totalsupply + amount < maxSupply, "exceeded NFT supply");
+        require(totalsupply + amount <= maxSupply, "exceeded NFT supply");
         uint tokenID ;
-        for (uint i = 0; i < amount; i ++){
+        for (uint i = 1; i <= amount; i ++){
             tokenID = totalsupply + i ;
             _mint(msg.sender, (totalsupply + i));
-            NFTstock[totalsupply + i] = false ;
-            totalsupply += 1 ;
+            NFTWasMinted[totalsupply + i] = true ;
             emit NFTminted(tokenID, block.timestamp, msg.sender, amount) ;
         }    
+        totalsupply += amount ;
             
 
     }

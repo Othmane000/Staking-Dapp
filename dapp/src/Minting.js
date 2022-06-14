@@ -3,8 +3,7 @@ import {ethers, BigNumber} from 'ethers' ;
 import nft721 from './NFT721ABI.json';
 
 
-const nft721Address = "0x747e1F8212b7dD7033Ec84Be75C012f0dB94B63F";
-// staking contract 0x57A0B2876391d34D9Afc804E64477211aB518640
+const nft721Address = "0x9541a34fDa8294ad456bA118d06FaB2Dfec9ee83";
 const Minting= ({accounts, setAccounts}) => {
     const [mintAmount, setMintAmount] = useState(1);
     const Connected = Boolean(accounts[0]);

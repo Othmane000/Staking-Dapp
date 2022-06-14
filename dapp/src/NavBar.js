@@ -37,7 +37,7 @@ const NavBar = ({accounts, setAccounts}) => {
                 <a href="https://discord.com">
                     <img src={Discord} width={iconsize} height={iconsize}></img>
                 </a>
-                <a href="https://testnets.opensea.io/collection/othmane-pyart-collection">
+                <a href="https://testnets.opensea.io/collection/othmane-hachads-pyart-collection">
                     <img src={Opensea} width={iconsize} height={iconsize} ></img>
                 </a>
             </div>
