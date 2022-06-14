@@ -1,79 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro");
+
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: "Kdam Thmor Pro";
+  
   color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.overlay {
+  opacity: 0.85;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: fixed;
 }
 
 
-.header {
-  color : white ;
-  background-color: black;
-  height: 70px;
-  padding : 15px 15px ;
 
-}
-
-nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 15px;
-}
-
-.mintbutton {
-  padding: 10px 20px; /* height/width */
-  font-family: "Trebuchet MS";
+.moving-background {
+  z-index: -1;
   position: absolute;
-  border-radius: 5px;
-  background-color: #61dafb;
-  left : 160px ;
-  top: 340px ;
+  top: 0 ;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("C:\Users\Othmane\Desktop\Staking-Dapp\dapp\src\assets\planet.gif");
+  background-size: cover;
+  background-position: 40%;
 }
 
-.nftminter {
-  position: absolute;
-  top: 150px;
-  left: 350px;
+
+.NavBar-left {
   width: 400px;
-  height: 400px;
-  border-radius: 20px;
-  background-color: blue;
-
+  text-align: left;
+  padding-left: 30px;
+  
+}
+.NavBar-right {
+  text-align: right;
+  padding-right: 30px;
+  
 }
 
-.nftminter h1 {
-  font-family: "Trebuchet MS";
-  color: white;
+.title-mintnow {
+  text-shadow: 2px 2px black  ;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-bottom: 600px;
+  
+}
+
+button {
+  font-family: "Kdam Thmor Pro";
+  background-color: #47EBE2;
+  width: 200px;
+  height: 35px;
+  font-size:larger ;
+  border-radius: 7px;
+}
+
+#plus-minus {
+    font-family: "Kdam Thmor Pro";
+    background-color: #47EBE2;
+    width: 35px;
+    height: 35px;
+    font-size: larger;
+    border-radius: 7px;
+}
+
+input[type="number"] {
+  width: 30px;
+  
 }
