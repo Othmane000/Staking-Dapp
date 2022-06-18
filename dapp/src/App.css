@@ -34,13 +34,26 @@
 }
 
 
+.NavBar {
+  position: fixed;
+  width: 1880px;
+  height: 100px;
+  background-color: black;
+  border-radius: 5px;
+}
+
 .NavBar-left {
+  position: fixed;
   width: 400px;
+  top: 10px;
   
 }
 .NavBar-right {
+  position: fixed;
   text-align: right;
-  right: 150px;
+  width: 200px;
+  right: 30px;
+  top: 30px;
   
 }
 

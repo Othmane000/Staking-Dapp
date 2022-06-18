@@ -28,7 +28,7 @@ const NavBar = ({accounts, setAccounts}) => {
     
 
     return (
-        <div>
+        <div className="NavBar">
             <div className="NavBar-left">
                 {/*left side fo the NavBar where there will be external links */}
                 <a href="https://twitter.com"  >
