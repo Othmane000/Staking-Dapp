@@ -84,6 +84,7 @@ const Staking = ({ accounts, setAccounts }) => {
             <div className="staking-button">
                 <div>
                     <button onClick={handleClaiming}>Claim Rewards</button>
+                    
                 </div>
                 <div>
                 <button  onClick={handleStaking}>Stake</button>

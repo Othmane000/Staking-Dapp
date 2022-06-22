@@ -1,9 +1,9 @@
 import React from "react";
 import './App.css';
-import { ethers, BigNumber } from 'ethers';
-import Twitter from "C:\\Users\\Othmane\\Desktop\\Staking-Dapp\\dapp\\src\\assets\\twitter.webp";
-import Discord from "C:\\Users\\Othmane\\Desktop\\Staking-Dapp\\dapp\\src\\assets\\discord.png";
-import Opensea from "C:\\Users\\Othmane\\Desktop\\Staking-Dapp\\dapp\\src\\assets\\opensea.png";
+import { ethers} from 'ethers';
+import Twitter from "./assets\\twitter.webp";
+import Discord from "./assets\\discord.png";
+import Opensea from "./assets\\opensea.png";
 
 const iconsize = 70 ;
 let useraddress
@@ -15,7 +15,7 @@ const NavBar = ({accounts, setAccounts}) => {
             const accounts = await window.ethereum.request({
                 method: "eth_requestAccounts"
             });
-            setAccounts(accounts);
+            setAccounts(accounts[0]); // will save the wallet address in account variable
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             const signer = provider.getSigner();
             useraddress = signer.getAddress();
@@ -46,7 +46,7 @@ const NavBar = ({accounts, setAccounts}) => {
             <div className="NavBar-right">
                 {/*right side of the NavBar where you will be able to connect your account, wallet address will be displayed*/}  
                 {Connected ? (
-                    <p>Connected</p>
+                    <p>{accounts}</p>
                 ) : (
                     <button onClick={connectAccount}>Connect Wallet</button>
                 )}
@@ -56,3 +56,6 @@ const NavBar = ({accounts, setAccounts}) => {
 }
 
 export default NavBar;
+
+/* htmlElement.innerHTML = `<img id="wallet-content" src='https://opensea.mypinata.cloud/ipfs/QmfPpQt2twQciNiDh5SgEKwx6jNXrLUvUtEJEtJuqJDSCf/${NFTlist[NFTindex].token_id}.jpeg'/>`
+            WalletItemContainer.appendChild(htmlElement); */
