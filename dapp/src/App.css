@@ -28,7 +28,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("C:\Users\Othmane\Desktop\Staking-Dapp\dapp\src\assets\planet.gif");
+  background-image: url("./assets/planet.gif");
   background-size: cover;
   background-position: 40%;
 }
@@ -60,8 +60,8 @@
 .title-mintnow {
   text-shadow: 2px 2px black  ;
   position: fixed;
-  top: 150px;
-  left: 600px;
+  top: 15%;
+  left: 30%;
   
 }
 
@@ -92,12 +92,12 @@ input[type="number"] {
 
 .staking-canvas {
   position: fixed;
-  bottom: 100px;
-  left: 650px;
+  bottom: 5%;
+  left: 33%;
   opacity: 0.75;
   background-color: black;
   width: 500px ;
-  height: 400px ;
+  height: 300px ;
 }
 
 
@@ -106,8 +106,8 @@ input[type="number"] {
   position: fixed;
   width: 400px;
   height: 35px;
-  bottom: 140px ;
-  left: 700px;
+  bottom: 14% ;
+  left: 36%;
 }
 
 
@@ -127,33 +127,3 @@ input[type="number"] {
 }
 
 
-#wallet-content {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-
-
-.NFT-image-container {
-  
-  position: relative;
-  top: 50px ;
-  margin-left: 15px;
-  width: 200px;
-}
-
-
-.imageToDisplay {
-  position: relative;
-  width: 300px;
-  height: 300px; 
-  top: 100px;
-  left: 150px;
-  background-color: white;
-}
-
-
-.pageNumber {
-  position: relative;
-  top: 365px;
-}

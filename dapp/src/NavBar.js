@@ -1,9 +1,9 @@
 import React from "react";
 import './App.css';
 import { ethers} from 'ethers';
-import Twitter from "./assets\\twitter.webp";
-import Discord from "./assets\\discord.png";
-import Opensea from "./assets\\opensea.png";
+import Twitter from "./assets/twitter.webp";
+import Discord from "./assets/discord.png";
+import Opensea from "./assets/opensea.png";
 
 const iconsize = 70 ;
 let useraddress
