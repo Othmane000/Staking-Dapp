@@ -8,7 +8,7 @@ import "Token20.sol";
 import "NFT721.sol" ;
 
 
-// contract address 
+// contract address 0x3966791501F31f99c9EB26111ec17d5D5D6c01F5
 
 /*  *************************************************************************************
     *Before doing anything, as the owner, setApprovalForAll(this-address, true) in both *

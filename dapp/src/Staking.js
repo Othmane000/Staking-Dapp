@@ -73,7 +73,7 @@ const Staking = ({ accounts, setAccounts }) => {
         <div className="staking-canvas">
             <h1>STAKING FORM</h1>
             <p>
-                Stake your NFT for a reward of 3 tokens per 10 seconds
+                Stake your NFT for a reward of 3 tokens per 10 seconds <br/>(specify tokenID)
             </p>
             <div>
                 <input id="staking-token-id" type="number"/>
