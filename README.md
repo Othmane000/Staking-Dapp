@@ -8,8 +8,6 @@ development. In this project I wrote a python script which creates random images
 After that we start writing the smart-contracts for minting one of these NFTs, staking them and getting ERC20 token rewards from them. Then we create a simple frontend so that users can mint and stake NFTs, the users can then stake/unstake their NFTs and also claim rewards without unstaking their NFT.
 To be able to mint you first need to be approved by the smart-contract creator address (mine).
 
->>>>>>> abff160aae57ece39f321ce455c17c31234eccce
-
 This project is not meant to make any money but only to show my work as a beginner dev !
 
 Check out the collection on opensea-testnet : https://testnets.opensea.io/collection/othmane-hachads-pyart-collection
