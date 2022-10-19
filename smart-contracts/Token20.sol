@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol" ;
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 
-// contract address 0xd58F448340E49d0e2cA1A529A6cD0F48C1c45EaB
+// contract address (needs to be changed when deployed on Goerli) 0xd58F448340E49d0e2cA1A529A6cD0F48C1c45EaB
 contract Token20 is ERC20, Ownable {
 
     event TokenMinted(
