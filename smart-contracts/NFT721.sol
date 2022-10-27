@@ -26,8 +26,9 @@ contract NFT721 is ERC721, Ownable {
         uint256 indexed numberOfTokens
     );
 
+
     constructor() ERC721("Othmane Hachad's PyART collection","HART") Ownable(){
-        //approval[msg.sender] = true ;
+      
         maxSupply = 50 ;
     }
 

@@ -56,10 +56,11 @@ contract Staking721 is IERC721Receiver{
 
 
     function stake(uint256 tokenID) public {
-        // need to work on the error "ERC721: caller is not token owner nor approved" and where it is coming from
-        // might be from the imported contracts : something in the original erc721 contract
+        /* IF PROMPTED WITH the error "ERC721: caller is not token owner nor approved"
+            IT IS BECAUSE the staking contract is not approved to call functions
+            MAKE SURE TO APPROVE THE CONTRACT IN ERC20 AND ERC721 after deploy*/
         require(NFT.ownerOf(tokenID) == msg.sender, "You are not the owner of this NFT") ;
-        NFT.safeTransferFrom(msg.sender, address(this), tokenID, "0x00") ;
+        NFT.safeTransferFrom(msg.sender, address(this), tokenID) ;
         IsNFTStaked[tokenID] = true ;
         ownerNFTs[tokenID] = msg.sender ;
         stakes[msg.sender] = Stake(tokenID, block.timestamp);
@@ -69,7 +70,7 @@ contract Staking721 is IERC721Receiver{
 
     function unstake(uint256 tokenID) public {
         require(ownerNFTs[tokenID]==msg.sender, "Please input NFT id that you own");
-        NFT.safeTransferFrom(address(this), msg.sender, tokenID, "0x00");
+        NFT.safeTransferFrom(address(this), msg.sender, tokenID);
         IsNFTStaked[tokenID] = false ;
         getReward(tokenID);
         amountTimeStaked[msg.sender][tokenID] = 0 ;
